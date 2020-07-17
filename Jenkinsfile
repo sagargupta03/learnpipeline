@@ -1,4 +1,4 @@
-// adding scripts as a job step
+// adding scripts as a job step- running a shell
 pipeline{
     agent any
     stages {
