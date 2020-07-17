@@ -4,6 +4,8 @@ pipeline{
     stages {
         stage('Deploy'){
             steps {
+                   sh pwd
+                   sh id  
                 timeout (time :1, unit: 'MINUTES'){
                   //  sh '/var/jenkins_home/scripts/fibonacci.sh 5'
                     sh '/home/centos/jenkinspipeline/linkedinpipe/learnpipeline/fibonacci.sh 5'
