@@ -1,23 +1,19 @@
-//multistep pipeline
-pipeline {
+// adding scripts as a job step
+pipeline{
     agent any
     stages {
-        stage ('Build'){
+        stage('Deploy'){
             steps {
-                sh 'echo "Hello World"'
-                
+                timeout (time :1, unit: 'Minutes'){
+                  //  sh '/var/jenkins_home/scripts/fibonacci.sh 5'
+                    sh '/home/centos/jenkinspipeline/linkedinpipe/learnpipeline/fibonacci.sh 5'
+ 
+                }
+                timeout (time :1, unit: 'Minutes'){
+                  //  sh '/var/jenkins_home/scripts/fibonacci.sh 32'
+                    sh '/home/centos/jenkinspipeline/linkedinpipe/learnpipeline/fibonacci.sh 5'
+
             }
-        }
-        
-        stage ('BuildMore'){
-            steps {
-               sh '''
-                   echo "Multiline shell steps works too"
-                   ls -lah
-                   pwd
-                   ''' 
-            }
-            
         }
     }
 }
