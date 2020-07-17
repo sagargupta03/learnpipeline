@@ -1,4 +1,4 @@
-#parameter script
+//parameter script
 pipeline{
         agent any
         parameters {
