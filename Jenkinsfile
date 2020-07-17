@@ -13,7 +13,8 @@ pipeline{
                   //  sh '/var/jenkins_home/scripts/fibonacci.sh 32'
                     sh '/home/centos/jenkinspipeline/linkedinpipe/learnpipeline/fibonacci.sh 5'
 
-            }
+                 }
+             }
         }
     }
 }
